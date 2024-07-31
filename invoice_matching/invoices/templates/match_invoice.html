@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block title %}Match Invoice{% endblock %}
+
+{% block content %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Match Invoice</title>
+</head>
+<body>
+<h1>Invoice Matching Result</h1>
+   <p>Most Similar Invoice ID: {{ most_similar_invoice.id }}</p>
+    <p>Similarity Score: {{ similarity_score }}</p>
+
+    <p> Input Invoice : </p><a href="{{ input_invoice.pdf.url }}">Input Invoice</a>
+
+
+   <p>Most Similar Invoice</p> <a href="{{ most_similar_invoice.pdf.url }}">Download </a>
+
+
+</body>
+</html>
+{% endblock %}
