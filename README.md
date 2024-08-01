@@ -1,2 +1,45 @@
 # Invoice-matching-System
 Invoice documents matching 
+# Document Similarity Matching System
+
+## Overview
+
+This project implements a document similarity matching system using Django. The system allows for the upload of invoices and compares them with existing invoices in the database using text-based similarity metrics.
+
+## Document Representation Method
+
+The chosen representation method involves extracting text from PDF documents using the PyPDF2 library. This text is then processed to compare the contents of invoices.
+
+## Similarity Metric Used
+
+The similarity between invoices is computed using cosine similarity. Text from the invoices is vectorized using TF-IDF (Term Frequency-Inverse Document Frequency), and similarity scores are calculated to find the closest matches.
+
+
+
+### Prerequisites
+
+1. **Python**: Ensure you have Python installed on your system.
+
+#### Instructions
+
+1.Create and Activate a Virtual Environment
+python -m venv venv
+source venv/bin/activate
+
+2.Install Dependencies
+pip install -r requirements.txt
+
+3.Run Database Migrations
+python manage.py migrate
+
+4.Start the Development Server
+python manage.py runserver
+
+5.Open the Web Application
+Open your web browser and go to http://127.0.0.1:8000/
+
+
+
+
+
+
